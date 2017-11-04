@@ -731,3 +731,2208 @@ Processing by CategoriesController#show as HTML
 Completed 200 OK in 103ms (Views: 71.4ms | ActiveRecord: 4.0ms)
 
 
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 16:47:15 +0800
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/index.html.slim within layouts/application (30.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.8ms)
+Completed 200 OK in 416ms (Views: 394.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 16:47:19 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.4ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/index.html.slim within layouts/application (17.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.6ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 16:47:20 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.8ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (14.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.5ms)
+Completed 200 OK in 53ms (Views: 48.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:05:04 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (74.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (127.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.0ms)
+Completed 200 OK in 268ms (Views: 198.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:38:35 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (8.7ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.6ms)
+  Rendered products/_product.html.slim (0.7ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (56.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (4.2ms)
+Completed 200 OK in 131ms (Views: 115.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:38:40 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (12.0ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.4ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.3ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (49.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (4.4ms)
+Completed 200 OK in 127ms (Views: 119.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-11-04 17:38:43 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (6.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m  [["category_id", 3], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (38.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (7.8ms)
+Completed 200 OK in 107ms (Views: 99.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2017-11-04 17:38:51 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 4 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 4 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (6.9ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 4 AND `products`.`is_del` = 0[0m  [["category_id", 4], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (39.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.0ms)
+Completed 200 OK in 108ms (Views: 98.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2017-11-04 17:39:01 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 4 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 4 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (3.3ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.3ms)
+  Rendered products/_product.html.slim (0.6ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 4 AND `products`.`is_del` = 0[0m  [["category_id", 4], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (37.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.6ms)
+Completed 200 OK in 90ms (Views: 79.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:43:30 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (4.8ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (34.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.3ms)
+Completed 200 OK in 94ms (Views: 84.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:43:31 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.6ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.8ms)
+  Rendered categories/index.html.slim within layouts/application (26.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.2ms)
+Completed 200 OK in 92ms (Views: 75.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:43:32 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (1.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.7ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.8ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (35.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.1ms)
+Completed 200 OK in 91ms (Views: 81.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:43:33 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (3.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.5ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (43.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.8ms)
+Completed 200 OK in 96ms (Views: 85.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:43:34 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (4.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.7ms)
+  Rendered categories/index.html.slim within layouts/application (21.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.7ms)
+Completed 200 OK in 70ms (Views: 62.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:43:35 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (5.6ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.3ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (45.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.7ms)
+Completed 200 OK in 98ms (Views: 88.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:43:35 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (5.5ms)
+  Rendered categories/_category_block.html.slim (1.1ms)
+  Rendered categories/_category_block.html.slim (0.8ms)
+  Rendered categories/_category_block.html.slim (0.4ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/index.html.slim within layouts/application (29.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.0ms)
+Completed 200 OK in 77ms (Views: 71.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:43:37 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (3.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.8ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (40.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.2ms)
+Completed 200 OK in 95ms (Views: 81.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:43:39 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (4.6ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (22.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.2ms)
+Completed 200 OK in 74ms (Views: 68.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:44:26 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (5.0ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.3ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (39.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.1ms)
+Completed 200 OK in 93ms (Views: 80.5ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:44:27 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (2.6ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (24.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.2ms)
+Completed 200 OK in 65ms (Views: 59.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:44:53 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.9ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/index.html.slim within layouts/application (21.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (3.4ms)
+Completed 200 OK in 76ms (Views: 70.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:45:35 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.5ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (14.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (4.6ms)
+Completed 200 OK in 62ms (Views: 57.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:47:47 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (15.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (281.1ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_worker' for #<#<Class:0x007f9eacc08cd8>:0x007f9eb14b9b58>
+Did you mean?  current_user):
+    3:     = link_to '首页', categories_path
+    4:   ul.nav.navbar-nav.ieCss.pull-right role="presentation"
+    5:     .dropdown
+    6:       span style="font-size:14px; color:#777" = current_worker.email
+    7:       button.btn.dropdown-toggler type='button' data-toggle='dropdown' style='background:none' &#9660
+    8:       ul.dropdown-menu role='menu' aria-labelledby="dropdownMenu1"
+    9:         li role="presentation"
+  
+app/views/layouts/_menu.html.slim:6:in `_app_views_layouts__menu_html_slim___3220630878675426412_70159777478980'
+app/views/layouts/application.html.slim:12:in `_app_views_layouts_application_html_slim__943286157003976936_70159778024000'
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:48:01 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.0ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (27.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (351.3ms)
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `destroy_worker_session_path' for #<#<Class:0x007f9eacc08cd8>:0x007f9eb15d9010>
+Did you mean?  destroy_user_session_path
+               destroy_session_path):
+     7:       button.btn.dropdown-toggler type='button' data-toggle='dropdown' style='background:none' &#9660
+     8:       ul.dropdown-menu role='menu' aria-labelledby="dropdownMenu1"
+     9:         li role="presentation"
+    10:           = link_to "退出登陆", destroy_worker_session_path, method: :delete
+    11:   / li role="presentation" class="#{is_active?(['orders'], params[:controller])}"
+    12:     = link_to '订单', orders_path
+    13:   / li role="presentation" class="#{is_active?(['home', 'addresses'], params[:controller])}"
+  
+app/views/layouts/_menu.html.slim:10:in `_app_views_layouts__menu_html_slim___3220630878675426412_70159721644100'
+app/views/layouts/application.html.slim:12:in `_app_views_layouts_application_html_slim__943286157003976936_70159778667260'
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:48:14 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.3ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (14.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.2ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:49:37 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.5ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (14.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.3ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:49:44 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (4.2ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/index.html.slim within layouts/application (27.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (4.6ms)
+Completed 200 OK in 76ms (Views: 71.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:50:07 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.7ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/index.html.slim within layouts/application (15.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.8ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (Malformed indentation
+  /Users/zhangxuechun/study/ruby/project/washing_user/app/views/layouts/_menu.html.slim, Line 12, Column 2
+    / li role="presentation" class="#{is_active?(['orders'], params[:controller])}"
+    ^
+):
+     9:         ul.dropdown-menu role='menu' aria-labelledby="dropdownMenu1"
+    10:           li role="presentation"
+    11:             = link_to "退出登陆", destroy_user_session_path, method: :delete
+    12:   / li role="presentation" class="#{is_active?(['orders'], params[:controller])}"
+    13:     = link_to '订单', orders_path
+    14:   / li role="presentation" class="#{is_active?(['home', 'addresses'], params[:controller])}"
+    15:     = link_to '我的', user_home_path
+  
+app/views/layouts/_menu.html.slim:12
+app/views/layouts/application.html.slim:12:in `_app_views_layouts_application_html_slim__943286157003976936_70159777924940'
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:50:43 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.0ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (15.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (4.5ms)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:53:14 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.8ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/index.html.slim within layouts/application (16.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (4.7ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:53:19 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (2.9ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (29.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.5ms)
+Completed 200 OK in 79ms (Views: 71.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:53:23 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (1.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (4.8ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (24.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.7ms)
+Completed 200 OK in 83ms (Views: 76.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:53:24 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (2.8ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.5ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (39.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.2ms)
+Completed 200 OK in 95ms (Views: 84.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 17:53:25 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (4.6ms)
+  Rendered categories/_category_block.html.slim (0.4ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (23.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (4.6ms)
+Completed 200 OK in 78ms (Views: 71.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 17:53:26 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (6.3ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.5ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (49.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (12.4ms)
+Completed 200 OK in 105ms (Views: 93.5ms | ActiveRecord: 5.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-04 17:53:29 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NUVuXH46JkPknYltJh8ESv2BNHmxPV0PfrGzO8oCMJgs9GJ4O+EIcXxnclT4nG64Utk2LhYd/INzEqX0DTQLaA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-04 17:53:29 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workers" for 127.0.0.1 at 2017-11-04 17:53:35 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/workers"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2017-11-04 17:53:40 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 17:54:05 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (9.2ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (58.6ms)
+  Rendered layouts/_menu.html.slim (7.2ms)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+     6:         = link_to '首页', categories_path
+     7:     ul.nav.navbar-nav.ieCss.pull-right role="presentation"
+     8:       .dropdown
+     9:         span style="font-size:14px; color:#777" = current_user.email
+    10:         button.btn.dropdown-toggler type='button' data-toggle='dropdown' style='background:none' &#9660
+    11:         ul.dropdown-menu role='menu' aria-labelledby="dropdownMenu1"
+    12:           li role="presentation"
+  
+app/views/layouts/_menu.html.slim:9:in `_app_views_layouts__menu_html_slim___3220630878675426412_70159761272640'
+app/views/layouts/application.html.slim:12:in `_app_views_layouts_application_html_slim__943286157003976936_70159776826220'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:02:20 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.5ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (13.9ms)
+  Rendered layouts/_menu.html.slim (7.3ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    4:         = link_to '首页', categories_path
+    5:     ul.nav.navbar-nav.ieCss.pull-right role="presentation" class="#{user_signed_in?}"
+    6:       .dropdown
+    7:         span style="font-size:14px; color:#777" = current_user.email
+    8:         button.btn.dropdown-toggler type='button' data-toggle='dropdown' style='background:none' &#9660
+    9:         ul.dropdown-menu role='menu' aria-labelledby="dropdownMenu1"
+   10:           li role="presentation"
+  
+app/views/layouts/_menu.html.slim:7:in `_app_views_layouts__menu_html_slim___3220630878675426412_70159760908720'
+app/views/layouts/application.html.slim:12:in `_app_views_layouts_application_html_slim__943286157003976936_70159775881080'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:03:53 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.2ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (14.2ms)
+  Rendered layouts/_menu.html.slim (7.6ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0)):
+    2:   .container
+    3:     a.navbar-brand role="presentation" class="#{is_active?(['categories'], params[:controller])}"
+    4:         = link_to '首页', categories_path
+    5:     ul.nav.navbar-nav.ieCss.pull-right role="presentation" class="#{user_signed_in?([''], params[:controller])}"
+    6:       .dropdown
+    7:         span style="font-size:14px; color:#777" = current_user.email
+    8:         button.btn.dropdown-toggler type='button' data-toggle='dropdown' style='background:none' &#9660
+  
+app/views/layouts/_menu.html.slim:5:in `_app_views_layouts__menu_html_slim___3220630878675426412_70159760402980'
+app/views/layouts/application.html.slim:12:in `_app_views_layouts_application_html_slim__943286157003976936_70159762929420'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:06:24 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.9ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (15.5ms)
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:06:30 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.3ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (26.7ms)
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:06:36 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (7.7ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (28.7ms)
+  Rendered layouts/_menu.html.slim (7.8ms)
+Completed 200 OK in 103ms (Views: 100.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:06:38 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (5.8ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (28.3ms)
+  Rendered layouts/_menu.html.slim (2.6ms)
+Completed 200 OK in 90ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:06:47 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.5ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (31.7ms)
+  Rendered layouts/_menu.html.slim (2.4ms)
+Completed 200 OK in 102ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:08:48 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.4ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (13.4ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:09:10 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GJnLYm8Ofk5DxbiqwHq5FdF9hAuNONbgaMCdZCaTMgAeJkjO2UkqRNUkwW7FR9Wstk8eBC3bLs6cqMQxh+QSZw==", "user"=>{"email"=>"123@qq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '123@qq.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GJnLYm8Ofk5DxbiqwHq5FdF9hAuNONbgaMCdZCaTMgAeJkjO2UkqRNUkwW7FR9Wstk8eBC3bLs6cqMQxh+QSZw==", "user"=>{"email"=>"123@qq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.5ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (16.0ms)
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 210ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:09:15 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9g7vLpDPdxwUFVqfP6+cPZrgJmZZSy4d3wi4gw15A7rwsWyCJogjFoL0I1s6kvCE/dK8afmo1jMrYOHWrA4j3Q==", "user"=>{"email"=>"123@qq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '123@qq.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9g7vLpDPdxwUFVqfP6+cPZrgJmZZSy4d3wi4gw15A7rwsWyCJogjFoL0I1s6kvCE/dK8afmo1jMrYOHWrA4j3Q==", "user"=>{"email"=>"123@qq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.2ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (16.0ms)
+  Rendered layouts/_menu.html.slim (2.7ms)
+Completed 200 OK in 193ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:09:19 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lipwbk85nRJX8ZBVLB/yuH4ePKlKFFM3QwH3zMiEQ74olfPC+X7JGMEQ6ZEpIp4BGSympur3qxm3aa6ZafNj2Q==", "user"=>{"email"=>"123@qq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '123@qq.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lipwbk85nRJX8ZBVLB/yuH4ePKlKFFM3QwH3zMiEQ74olfPC+X7JGMEQ6ZEpIp4BGSympur3qxm3aa6ZafNj2Q==", "user"=>{"email"=>"123@qq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.7ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (21.6ms)
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 192ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:09:24 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YXOpZ74qctNf6tTsYtoULUkUWmh7/9LFuJgxQ/Eb3XBnzCrLCG0m2ckLrShn53iULibAZ9scKutM8GgWUGz9Fw==", "user"=>{"email"=>"123@qq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '123@qq.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YXOpZ74qctNf6tTsYtoULUkUWmh7/9LFuJgxQ/Eb3XBnzCrLCG0m2ckLrShn53iULibAZ9scKutM8GgWUGz9Fw==", "user"=>{"email"=>"123@qq.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.6ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (15.3ms)
+  Rendered layouts/_menu.html.slim (2.2ms)
+Completed 200 OK in 189ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:09:33 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJURrxTpxPdvrtJDlvbn/8O+zp7cWG/MBqV574hKaoY6KpIDoq6Q/flPq4eTy4tGpIxUkXy7l+LyzSC6KT1K4Q==", "user"=>{"email"=>"1@1", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '1@1' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-04 10:09:33', `sign_in_count` = 2, `updated_at` = '2017-11-04 10:09:33' WHERE `users`.`id` = 1[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 147ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-04 18:09:33 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 18:10:34 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.6ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.4ms)
+  Rendered categories/index.html.slim within layouts/application (21.0ms)
+  Rendered layouts/_menu.html.slim (1.8ms)
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2017-11-04 18:10:46 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 2 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 2 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (5.5ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 2 AND `products`.`is_del` = 0[0m  [["category_id", 2], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (31.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.2ms)
+Completed 200 OK in 85ms (Views: 76.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 18:10:52 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (3.4ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (29.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 76ms (Views: 66.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 18:12:20 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.9ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (18.5ms)
+  Rendered layouts/_menu.html.slim (2.2ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 18:12:29 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (5.0ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.4ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (28.8ms)
+  Rendered layouts/_menu.html.slim (2.2ms)
+Completed 200 OK in 68ms (Views: 63.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 18:12:31 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (2.5ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (35.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (1.8ms)
+Completed 200 OK in 83ms (Views: 71.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 18:14:45 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.5ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (18.6ms)
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 18:14:54 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.5ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (22.5ms)
+  Rendered layouts/_menu.html.slim (2.2ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-11-04 18:14:56 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (3.6ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m  [["category_id", 3], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (34.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 93ms (Views: 81.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-04 18:14:58 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (4.0ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m  [["category_id", 1], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (33.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 75ms (Views: 69.4ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-04 18:15:32 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"D9w0ptO3OLzpnZj5QkBmXJ0/I855b1MFCYJUglYR+UeGx6PZ72ncMVSVBuMAsFtiM+9C76mBwG+bJzAJrM0z0A=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-04 18:15:33 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 18:15:42 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  Rendered categories/index.html.slim within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+     5:         = link_to '首页', categories_path
+     6:       ul.nav.navbar-nav.ieCss.pull-right role="presentation"
+     7:         .dropdown
+     8:           span style="font-size:14px; color:#777" = current_user.email
+     9:           button.btn.dropdown-toggler type='button' data-toggle='dropdown' style='background:none' &#9660
+    10:           ul.dropdown-menu role='menu' aria-labelledby="dropdownMenu1"
+    11:             li role="presentation"
+  
+app/views/categories/index.html.slim:8:in `_app_views_categories_index_html_slim___3918642557209420061_70159772374000'
+Started GET "/workers" for 127.0.0.1 at 2017-11-04 18:15:53 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/workers"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/workers/sign_up" for 127.0.0.1 at 2017-11-04 18:15:59 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/workers/sign_up"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:16:10 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.4ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (12.8ms)
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:16:14 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (5.6ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (25.3ms)
+  Rendered layouts/_menu.html.slim (2.2ms)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK(4139698570955185140, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to Users (20171104101946)
+  [1m[35m (61.3ms)[0m  [1m[35mALTER TABLE `users` ADD `cel` varchar(255)[0m
+  [1m[35m (17.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_cel`  ON `users` (`cel`) [0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171104101946')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(4139698570955185140)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:39:25 +0800
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (82.9ms)
+  Rendered layouts/_menu.html.slim (2.9ms)
+Completed 200 OK in 455ms (Views: 426.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:55:22 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.7ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (29.9ms)
+  Rendered layouts/_menu.html.slim (2.3ms)
+Completed 200 OK in 115ms (Views: 87.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:55:31 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (52.9ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (77.2ms)
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 122ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:55:34 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.6ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (39.7ms)
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 104ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:55:55 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/sessions/new.html.slim within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/zhangxuechun/study/ruby/project/washing_user/app/views/devise/sessions/new.html.slim:8: syntax error, unexpected ')', expecting =>
+ autofocus: true ,"手机号"))).to_s)); 
+                              ^
+/Users/zhangxuechun/study/ruby/project/washing_user/app/views/devise/sessions/new.html.slim:14: syntax error, unexpected keyword_end, expecting ')'
+concat(("</div>".freeze)); end; @output_buffer.safe_concat((
+                              ^
+/Users/zhangxuechun/study/ruby/project/washing_user/app/views/devise/sessions/new.html.slim:17: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/zhangxuechun/study/ruby/project/washing_user/app/views/devise/sessions/new.html.slim:19: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  
+app/views/devise/sessions/new.html.slim:8: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.slim:14: syntax error, unexpected keyword_end, expecting ')'
+app/views/devise/sessions/new.html.slim:17: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/devise/sessions/new.html.slim:19: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:56:14 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/sessions/new.html.slim within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Unknown line indicator
+  /Users/zhangxuechun/study/ruby/project/washing_user/app/views/devise/sessions/new.html.slim, Line 8, Column 8
+    "手机号" = f.input :cel, required: false, autofocus: true
+    ^
+):
+     5:   .panel-body
+     6:     = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+     7:       .form-inputs
+     8:         "手机号" = f.input :cel, required: false, autofocus: true
+     9:         = f.input :email, required: false
+    10:         = f.input :password, required: false
+    11:         = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+  
+app/views/devise/sessions/new.html.slim:8
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:56:30 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.9ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (16.3ms)
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:56:33 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.0ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (18.6ms)
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:57:28 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.4ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (18.2ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:57:43 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.1ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (14.5ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:59:37 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.7ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (16.1ms)
+  Rendered layouts/_menu.html.slim (2.3ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:59:49 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.2ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (13.9ms)
+  Rendered layouts/_menu.html.slim (2.3ms)
+Completed 200 OK in 57ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 18:59:51 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (5.3ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (24.3ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 78ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 18:59:55 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (17.9ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (47.2ms)
+  Rendered layouts/_menu.html.slim (3.7ms)
+Completed 200 OK in 113ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 19:11:16 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.5ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (15.1ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 76ms (Views: 59.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:11:18 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (5.6ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (22.5ms)
+  Rendered layouts/_menu.html.slim (2.7ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2017-11-04 19:11:19 +0800
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (13.7ms)
+  Rendered devise/passwords/new.html.slim within layouts/application (26.9ms)
+  Rendered layouts/_menu.html.slim (1.8ms)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:11:29 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.7ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (23.9ms)
+  Rendered layouts/_menu.html.slim (3.6ms)
+Completed 200 OK in 91ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 19:11:32 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (9.4ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (28.8ms)
+  Rendered layouts/_menu.html.slim (3.4ms)
+Completed 200 OK in 100ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-11-04 19:11:52 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iVfv7k/c+ScOuLmMXdEhMS4/3h5uXnZqIdjcz1pTZIzLX8XXRlHhK/M1m9fp885dQ+3IP4J0HfxvB8AayAMgYg==", "user"=>{"cel"=>"abc", "email"=>"2@2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '2@2' LIMIT 1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`cel` = 'abc' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.6ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (15.4ms)
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 229ms (Views: 57.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-11-04 19:12:11 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sQugmcXcEd8s4JmVBeD4qcpJbfYbgKQKBRZ+7powLBgZn18m6OX7FVoivy+7stqiGSbSzgthJPgzTIxBm8dtGQ==", "user"=>{"cel"=>"18811761183", "email"=>"2@2", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY '2@2' LIMIT 1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`cel` = '18811761183' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `cel`) VALUES ('2@2', '$2a$11$/lxz3dxHhwVgC4or7/XvsuOK5yLds93jZzMMxpjsR2ao9uDQUrAwC', '2017-11-04 11:12:11', '2017-11-04 11:12:11', '18811761183')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2017-11-04 11:12:11', `last_sign_in_at` = '2017-11-04 11:12:11', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 154ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-04 19:12:11 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 19:12:19 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (2.8ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.1ms)
+  Rendered categories/index.html.slim within layouts/application (26.9ms)
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 76ms (Views: 66.2ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-04 19:12:22 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eJj1WbuDYxM1CafihkbyKQWuiJOE+p2HicH7ej/HVJHQDArmlrqJ2UPLgVg4FNAi1sE3q5QbHXW/mwnVPjAVkA=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-04 19:12:22 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-11-04 19:12:29 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 19:12:35 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.5ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (16.8ms)
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:14:10 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.4ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (32.9ms)
+  Rendered layouts/_menu.html.slim (2.2ms)
+Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:14:17 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5PaEeUAcI/7SctT/rSfQo/2QeAAZMWC8EAu/oG4iWYAx5BL0HqmYCfd4OAcjqcIeWdnjYbeN8NqeBTyuHziRzw==", "user"=>{"cel"=>"18811761183", "email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5PaEeUAcI/7SctT/rSfQo/2QeAAZMWC8EAu/oG4iWYAx5BL0HqmYCfd4OAcjqcIeWdnjYbeN8NqeBTyuHziRzw==", "user"=>{"cel"=>"18811761183", "email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Unpermitted parameter: :cel
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (19.0ms)
+  Rendered layouts/_menu.html.slim (2.7ms)
+Completed 200 OK in 209ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:14:32 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUqJBVD028wyTIeyOkZmhpTn/h78lk32cL899nj9+ttrfYkG6UTcTQCnc0qCDWl7omIzRLYjYRFA1BXpVJfUEw==", "user"=>{"cel"=>"18811761183", "email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUqJBVD028wyTIeyOkZmhpTn/h78lk32cL899nj9+ttrfYkG6UTcTQCnc0qCDWl7omIzRLYjYRFA1BXpVJfUEw==", "user"=>{"cel"=>"18811761183", "email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Unpermitted parameter: :cel
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (24.0ms)
+  Rendered layouts/_menu.html.slim (3.1ms)
+Completed 200 OK in 215ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:16:45 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/sessions/new.html.slim within layouts/application (17.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `login' for #<User:0x007fc9675b0e90>):
+     5:   .panel-body
+     6:     = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+     7:       .form-inputs
+     8:         = f.input :login, required: false ,autofocus: true
+     9:         = f.input :password, required: false
+    10:         = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+    11:       .form-actions
+  
+app/views/devise/sessions/new.html.slim:8:in `block in _app_views_devise_sessions_new_html_slim___286923172075846136_70251499557720'
+app/views/devise/sessions/new.html.slim:6:in `_app_views_devise_sessions_new_html_slim___286923172075846136_70251499557720'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:22:00 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/sessions/new.html.slim within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `login' for #<User:0x007fc96166d690>):
+     5:   .panel-body
+     6:     = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+     7:       .form-inputs
+     8:         = f.input :login, required: false ,autofocus: true
+     9:         = f.input :password, required: false
+    10:         = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+    11:       .form-actions
+  
+app/views/devise/sessions/new.html.slim:8:in `block in _app_views_devise_sessions_new_html_slim___286923172075846136_70251500305900'
+app/views/devise/sessions/new.html.slim:6:in `_app_views_devise_sessions_new_html_slim___286923172075846136_70251500305900'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:24:03 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/sessions/new.html.slim within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `login' for #<User:0x007fc96769e190>):
+     5:   .panel-body
+     6:     = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+     7:       .form-inputs
+     8:         = f.input :login, required: false ,autofocus: true
+     9:         = f.input :password, required: false
+    10:         = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+    11:       .form-actions
+  
+app/views/devise/sessions/new.html.slim:8:in `block in _app_views_devise_sessions_new_html_slim___286923172075846136_70251491889500'
+app/views/devise/sessions/new.html.slim:6:in `_app_views_devise_sessions_new_html_slim___286923172075846136_70251491889500'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:26:24 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (16.6ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 75ms (Views: 60.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:26:51 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PusuE+ri6aT820K0MMTvWzbx39R2E/f41Dh2vFUz9kpU3C4QU1LuJc4wtkyIj+CmAHQSjjym2x/kU16jeVnYgg==", "user"=>{"login"=>"18811761183", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE (lower(cel) = '18811761183' OR lower(email) = '18811761183') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-04 11:26:51', `sign_in_count` = 2, `updated_at` = '2017-11-04 11:26:51' WHERE `users`.`id` = 2[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 147ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-04 19:26:51 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 19:27:00 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (24.9ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 66ms (Views: 58.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 19:29:11 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.5ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.3ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (39.0ms)
+  Rendered layouts/_menu.html.slim (2.7ms)
+Completed 200 OK in 82ms (Views: 71.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-04 19:29:31 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` WHERE `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (3.1ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/_category_block.html.slim (0.2ms)
+  Rendered categories/index.html.slim within layouts/application (19.1ms)
+  Rendered layouts/_menu.html.slim (2.3ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-11-04 19:30:02 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (3.8ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  Rendered products/_product.html.slim (3.2ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  Rendered products/_product.html.slim (0.1ms)
+  [1m[35mCACHE  (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m  [["category_id", 3], ["is_del", 0]]
+  Rendered categories/show.html.slim within layouts/application (35.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 120ms (Views: 81.1ms | ActiveRecord: 6.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-11-04 19:30:34 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QdvJjGrdeGu39tCECD8J8yCuK4hwu+686JV7AC54Ryw1HSHbzbAWHlhWK8J0ppQtJPQdzqK1+W4HUCZEb9Q/iQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-04 19:30:34 +0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/zhangxuechun/.rvm/gems/ruby-2.4.1/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workers" for 127.0.0.1 at 2017-11-04 19:30:40 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/workers"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/workers/sign_up" for 127.0.0.1 at 2017-11-04 19:30:57 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/workers/sign_up"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 19:31:03 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.0ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (15.2ms)
+  Rendered layouts/_menu.html.slim (2.3ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 19:32:16 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.3ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (14.2ms)
+  Rendered layouts/_menu.html.slim (3.1ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:32:36 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.4ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (26.3ms)
+  Rendered layouts/_menu.html.slim (2.3ms)
+Completed 200 OK in 73ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2017-11-04 19:33:13 +0800
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.6ms)
+  Rendered devise/passwords/new.html.slim within layouts/application (19.9ms)
+  Rendered layouts/_menu.html.slim (3.0ms)
+Completed 200 OK in 73ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2017-11-04 19:33:22 +0800
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X4oiOF/emYbAuJe6Tb4b8+dlhveWwSAsGZQp0ewmIT5ZMnx8fw4fA1BF0Cy0lpcOPHdkJNawwtR7c5iiwJAyww==", "user"=>{"cel"=>"", "email"=>""}, "commit"=>"Send me reset password instructions"}
+  Rendering devise/passwords/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.9ms)
+  Rendered devise/passwords/new.html.slim within layouts/application (14.3ms)
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 77ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password" for 127.0.0.1 at 2017-11-04 19:33:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users/password"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/password" for 127.0.0.1 at 2017-11-04 19:34:01 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users/password"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/password" for 127.0.0.1 at 2017-11-04 19:34:09 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users/password"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2017-11-04 19:34:13 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2017-11-04 19:34:27 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2017-11-04 19:34:43 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 19:34:48 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (3.9ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (16.2ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:34:50 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (7.8ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (32.6ms)
+  Rendered layouts/_menu.html.slim (2.0ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2017-11-04 19:34:51 +0800
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.2ms)
+  Rendered devise/passwords/new.html.slim within layouts/application (20.1ms)
+  Rendered layouts/_menu.html.slim (1.9ms)
+Completed 200 OK in 85ms (Views: 76.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2017-11-04 19:35:04 +0800
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.0ms)
+  Rendered devise/passwords/new.html.slim within layouts/application (12.2ms)
+  Rendered layouts/_menu.html.slim (3.2ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-11-04 19:35:07 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.9ms)
+  Rendered devise/registrations/new.html.slim within layouts/application (22.5ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-04 19:35:13 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (4.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (20.8ms)
+  Rendered layouts/_menu.html.slim (2.1ms)
+Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
