@@ -11,11 +11,11 @@
             li role="presentation"
               = link_to "退出登陆", destroy_user_session_path, method: :delete
   .panel-body
-    .table
-      .tr
-        - @categories.each_slice(2).each do |categories|
-          .td
-            - categories.each do |category|
-              .col-xs-6
-                = render partial: 'categories/category_block', locals: {category: category}
+    table.table.table-striped.table-hover
+      .row
+      - @categories.each_slice(2).each do |categories|
+          - categories.each do |category|
+             .col-xs-6
+               = render partial: 'categories/category_block', locals: {category: category}
+
 
