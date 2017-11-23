@@ -1,0 +1,11 @@
+- unless current_user
+  = link_to '登录', new_user_session_path
+- else
+  .row
+    .col-md-12
+      .panel.panel-default
+        .panel-body
+          table.table
+            tr
+              td = link_to '地址列表', user_addresses_path
+              td = link_to '在线客服'

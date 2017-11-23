@@ -35,11 +35,14 @@ gem 'jbuilder', '~> 2.5'
 gem "slim-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
-gem 'will_paginate', github: 'jonatack/will_paginate'
+gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 
 gem 'devise'
+gem 'wdm', '>= 0.1.0'
 
+gem "select2-rails"
+gem 'rest-client'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

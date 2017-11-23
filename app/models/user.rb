@@ -27,4 +27,8 @@ class User < ApplicationRecord
             }
 
   validates_format_of :cel, with: /^[0-9]{7,12}$/, :multiline => true
+
+
+
+  has_many :user_addresses
 end
