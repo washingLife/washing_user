@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Address:
+  = @address.address
+p
+  strong Lat:
+  = @address.lat
+p
+  strong Lng:
+  = @address.lng
+
+= link_to 'Edit', edit_address_path(@address)
+'|
+= link_to 'Back', addresses_path
