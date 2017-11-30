@@ -10,7 +10,7 @@ default: &default
   database: washing_development
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: 4670
+  password: 123456
   timeout: 5000
 
 development:

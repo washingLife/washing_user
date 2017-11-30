@@ -1,5 +1,7 @@
-.text-center
-  = image_tag qiniu_url(product.logo), size: '150x150'
-  br
-  = product.name
-    
+table
+  tr
+    td = image_tag qiniu_url(product.logo), size: '150x150'
+  tr
+    td = product.name
+  tr
+    td = product.price.send("price#{@price_rule.grade}")

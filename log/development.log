@@ -4971,3 +4971,569 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 77ms (Views: 75.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-28 23:40:33 +0800
+  
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+mysql2-0.4.9-x64 (mingw32) lib/mysql2/client.rb:89:in `connect'
+mysql2-0.4.9-x64 (mingw32) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `mysql2_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-28 23:40:55 +0800
+  
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+mysql2-0.4.9-x64 (mingw32) lib/mysql2/client.rb:89:in `connect'
+mysql2-0.4.9-x64 (mingw32) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `mysql2_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-28 23:41:15 +0800
+  
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+mysql2-0.4.9-x64 (mingw32) lib/mysql2/client.rb:89:in `connect'
+mysql2-0.4.9-x64 (mingw32) lib/mysql2/client.rb:89:in `initialize'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `new'
+activerecord (5.1.4) lib/active_record/connection_adapters/mysql2_adapter.rb:21:in `mysql2_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.4) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-11-28 23:42:15 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.5ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (263.7ms)
+  Rendered layouts/_menu.html.slim (27.5ms)
+Completed 200 OK in 14295ms (Views: 14247.0ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-11-28 23:43:16 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XwfOD8BRmQ9nEMmKhJQLHmx8Z4PgvBJWK5SeisPPNuLZzajchPkd6soUO3ffUa5ohed3aaID6EuRhd0qc4tuyQ==", "user"=>{"login"=>"18813091063", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (85.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE (lower(cel) = '18813091063' OR lower(email) = '18813091063') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-11-28 15:43:16', `last_sign_in_at` = '2017-11-26 06:55:12', `sign_in_count` = 8, `updated_at` = '2017-11-28 15:43:16' WHERE `users`.`id` = 1[0m
+  [1m[35m (125.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 639ms (ActiveRecord: 211.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:43:16 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` ORDER BY `cities`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (27.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (6.5ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (208.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCACHE City Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (16.5ms)
+Completed 200 OK in 586ms (Views: 478.6ms | ActiveRecord: 36.5ms)
+
+
+Started PUT "/users/change_current_city?city_id=3" for 127.0.0.1 at 2017-11-28 23:43:22 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"Zpa5v6canLFn/ogvX2WSx/eYdEKHaNQNDMVOKnAQXk3tX+MPkBi+pn9xBTq06uju5JS4Mne1eWlQp6MPddTgdg==", "city_id"=>"3"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:43:22 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  Rendered categories/_category_block.html.slim (4.5ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (53.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCACHE City Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (16.0ms)
+Completed 200 OK in 338ms (Views: 321.5ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/users/change_current_city?city_id=2" for 127.0.0.1 at 2017-11-28 23:43:25 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"lGw7sFZ/vR3GKdhkRrlv3ORhD72hBrHhtM7ZUfGYOoIfpWEAYX2fCt6mVXGtNhX1923DzVHbHIXorDR09FyEuQ==", "city_id"=>"2"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:43:25 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (5.0ms)
+  Rendered categories/_category_block.html.slim (0.0ms)
+  Rendered categories/index.html.slim within layouts/application (46.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCACHE City Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (15.5ms)
+Completed 200 OK in 341ms (Views: 326.1ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/users/change_current_city?city_id=3" for 127.0.0.1 at 2017-11-28 23:43:27 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"mNinq2mlLMSGNv79n5ZCC4P/BRGWKHD/jlEBRDmLXmcTEf0bXqcO0565c+h0GTgikPPJYWb13ZvSM+xhPE/gXA==", "city_id"=>"3"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:43:27 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  Rendered categories/_category_block.html.slim (5.5ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (50.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCACHE City Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (15.5ms)
+Completed 200 OK in 335ms (Views: 318.2ms | ActiveRecord: 3.5ms)
+
+
+Started PUT "/users/change_current_city?city_id=2" for 127.0.0.1 at 2017-11-28 23:43:29 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"zPG/ZHU2vLLUvE/ZDlybTp1AXmNFRWvHUe8EZfZ6zU5HOOXUQjSepcwzwszl0+FnjkySE7WYxqMNjelA875zdQ==", "city_id"=>"2"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:43:29 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (4.5ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (50.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCACHE City Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (19.0ms)
+Completed 200 OK in 340ms (Views: 322.2ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/users/change_current_city?city_id=3" for 127.0.0.1 at 2017-11-28 23:45:02 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"l7E7IKBDj1TTmzqpJa7JRdj8o3ykBHgRLAJdNC5+iNEceGGQl0GtQ8sUt7zOIbNsy/BvDFTZ1XVwYLARK7o26g==", "city_id"=>"3"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:45:02 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  Rendered categories/_category_block.html.slim (7.5ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (56.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCACHE City Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (17.0ms)
+Completed 200 OK in 352ms (Views: 334.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-11-28 23:45:06 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.0ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 3[0m
+  [1m[36mAddress Load (20.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 3 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/index.html.slim within layouts/application (81.6ms)
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (20.5ms)
+Completed 200 OK in 457ms (Views: 345.8ms | ActiveRecord: 31.0ms)
+
+
+Started PUT "/users/change_current_city?city_id=2" for 127.0.0.1 at 2017-11-28 23:45:10 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"vLhYhOSmmdYadW/bTpxiKQGBIy8sOrZHsCiUC14I2CA3cQI006S7wQL64s6lExgAEo3vX9znGyPsSnkuW8xmGw==", "city_id"=>"2"}
+Redirected to http://localhost:3000/user_addresses
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-11-28 23:45:10 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 2[0m
+  Rendered user_addresses/index.html.slim within layouts/application (12.0ms)
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (19.5ms)
+Completed 200 OK in 323ms (Views: 304.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:45:13 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (4.5ms)
+  Rendered categories/_category_block.html.slim (0.0ms)
+  Rendered categories/index.html.slim within layouts/application (48.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCACHE City Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (18.5ms)
+Completed 200 OK in 325ms (Views: 309.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:47:37 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (5.0ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (45.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (19.0ms)
+Completed 200 OK in 346ms (Views: 327.6ms | ActiveRecord: 3.0ms)
+
+
+Started PUT "/users/change_current_city?city_id=3" for 127.0.0.1 at 2017-11-28 23:47:40 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"fI/CUSmJe5486HgpY05hYvI/4L1DNCR9FW/Eq76UbCv3RpjhHotZiSRn9TyIwRtL4TMszbPpiRlJDSmOu1DSEA==", "city_id"=>"3"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:47:40 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  Rendered categories/_category_block.html.slim (5.5ms)
+  Rendered categories/_category_block.html.slim (0.0ms)
+  Rendered categories/index.html.slim within layouts/application (42.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (16.0ms)
+Completed 200 OK in 340ms (Views: 325.5ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/users/change_current_city?city_id=2" for 127.0.0.1 at 2017-11-28 23:47:41 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"n5Qk8qolR9UugPFKGR4dWtOvR3pTW+33jcVI9wPyVsQUXX5CnSdlwjYPfF/ykWdzwKOLCqOGQJPRp6XSBjbo/w==", "city_id"=>"2"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:47:41 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (4.0ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (42.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (17.5ms)
+Completed 200 OK in 340ms (Views: 317.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-11-28 23:47:42 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mPriceRule Load (17.0ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 3 AND (city_id = 2 and from_date <= '2017-11-28') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 14 LIMIT 1[0m
+  Rendered products/_product.html.slim (46.5ms)
+  Rendered categories/show.html.slim within layouts/application (81.6ms)
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 31.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `grade' for nil:NilClass):
+    4:   tr
+    5:     td = product.name
+    6:   tr
+    7:     td = product.price.send("price#{@price_rule.grade}")
+  
+app/views/products/_product.html.slim:7:in `_app_views_products__product_html_slim__1282445361_169670100'
+app/views/categories/show.html.slim:5:in `block (2 levels) in _app_views_categories_show_html_slim___1789763580_175109880'
+app/views/categories/show.html.slim:3:in `each'
+app/views/categories/show.html.slim:3:in `block in _app_views_categories_show_html_slim___1789763580_175109880'
+app/views/categories/show.html.slim:1:in `each_slice'
+app/views/categories/show.html.slim:1:in `each'
+app/views/categories/show.html.slim:1:in `_app_views_categories_show_html_slim___1789763580_175109880'
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:47:51 +0800
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (4.5ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (48.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (18.5ms)
+Completed 200 OK in 340ms (Views: 322.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-28 23:54:47 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (4.0ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (93.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (18.0ms)
+Completed 200 OK in 1334ms (Views: 1184.2ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-11-28 23:55:15 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mPriceRule Load (0.5ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 3 AND (city_id = 2 and from_date <= '2017-11-28') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 14 LIMIT 1[0m
+  Rendered products/_product.html.slim (62.5ms)
+  Rendered categories/show.html.slim within layouts/application (105.1ms)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 16.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `grade' for nil:NilClass):
+    4:   tr
+    5:     td = product.name
+    6:   tr
+    7:     td = product.price.send("price#{@price_rule.grade}")
+  
+app/views/products/_product.html.slim:7:in `_app_views_products__product_html_slim__42417232_145429160'
+app/views/categories/show.html.slim:5:in `block (2 levels) in _app_views_categories_show_html_slim___982791338_144830440'
+app/views/categories/show.html.slim:3:in `each'
+app/views/categories/show.html.slim:3:in `block in _app_views_categories_show_html_slim___982791338_144830440'
+app/views/categories/show.html.slim:1:in `each_slice'
+app/views/categories/show.html.slim:1:in `each'
+app/views/categories/show.html.slim:1:in `_app_views_categories_show_html_slim___982791338_144830440'
+Started GET "/categories" for 127.0.0.1 at 2017-11-29 00:03:05 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (5.0ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (46.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (35.5ms)
+Completed 200 OK in 445ms (Views: 423.8ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/users/change_current_city?city_id=3" for 127.0.0.1 at 2017-11-29 00:03:08 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"gIrkMt6dSpvj3xvaymB6aSAwODldl062aUXlAPFLfzgLQ76C6Z9ojPtQls8h7wBAMzz0Sa1K49I1Jwgl9I/BAw==", "city_id"=>"3"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-11-29 00:03:08 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  Rendered categories/_category_block.html.slim (5.0ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (43.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (22.5ms)
+Completed 200 OK in 370ms (Views: 351.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-11-29 00:03:09 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mPriceRule Load (1.0ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 1 AND (city_id = 3 and from_date <= '2017-11-29') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 2 LIMIT 1[0m
+  Rendered products/_product.html.slim (8.0ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 3 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.5ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 4 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.5ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 5 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.5ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 6 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.5ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 1 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.5ms)
+  Rendered categories/show.html.slim within layouts/application (106.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (18.5ms)
+Completed 200 OK in 448ms (Views: 401.1ms | ActiveRecord: 8.5ms)
+
+
