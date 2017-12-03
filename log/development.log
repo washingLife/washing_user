@@ -5537,3 +5537,569 @@ Processing by CategoriesController#show as HTML
 Completed 200 OK in 448ms (Views: 401.1ms | ActiveRecord: 8.5ms)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-03 13:20:16 +0800
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (21.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (656.6ms)
+  Rendered layouts/_menu.html.slim (50.0ms)
+Completed 200 OK in 5249ms (Views: 5033.6ms | ActiveRecord: 29.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-03 13:22:07 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WG8UmQJ9IxO6JLE/rQWJbBFxBuXAhcjwk3IA914D/DgxSVzIv+KrT3t08nNHT7/RqZqVTMP/oPJxIMADSjiuDQ==", "user"=>{"login"=>"18813091063", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (25.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE (lower(cel) = '18813091063' OR lower(email) = '18813091063') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-12-03 05:22:08', `last_sign_in_at` = '2017-11-28 15:43:16', `sign_in_count` = 9, `updated_at` = '2017-12-03 05:22:08' WHERE `users`.`id` = 1[0m
+  [1m[35m (81.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 1609ms (ActiveRecord: 110.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-03 13:22:08 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` ORDER BY `cities`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (34.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (1.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (20.0ms)
+  Rendered categories/_category_block.html.slim (1.0ms)
+  Rendered categories/index.html.slim within layouts/application (385.3ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (137.6ms)
+Completed 200 OK in 1787ms (Views: 1371.8ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:22:16 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (2.0ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 2[0m
+  Rendered user_addresses/index.html.slim within layouts/application (49.5ms)
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (66.4ms)
+Completed 200 OK in 1319ms (Views: 1145.7ms | ActiveRecord: 45.0ms)
+
+
+Started PUT "/users/change_current_city?city_id=3" for 127.0.0.1 at 2017-12-03 13:22:20 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"3LbX8S6yOPSomBLSsiD4w2FXhzTE9YxGNmoQ39kcAVWYCswGTzdeJFtKk34NTk/lPOufEgkxLneEiUriO+eDXA==", "city_id"=>"3"}
+Redirected to http://localhost:3000/user_addresses
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:22:20 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 3[0m
+  [1m[36mAddress Load (14.1ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 3 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/index.html.slim within layouts/application (270.7ms)
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (89.6ms)
+Completed 200 OK in 1362ms (Views: 1233.8ms | ActiveRecord: 58.1ms)
+
+
+Started PUT "/users/change_current_city?city_id=2" for 127.0.0.1 at 2017-12-03 13:22:24 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"OLBOpHda/AFBwImgN4dCqRGTSM8qAMVk+bc2c5UMdPt8DFVTFt+a0bISCAyI6fWPTC9Q6efEZ1VLVGxOd/f28g==", "city_id"=>"2"}
+Redirected to http://localhost:3000/user_addresses
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:22:24 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 2[0m
+  Rendered user_addresses/index.html.slim within layouts/application (54.0ms)
+  [1m[36mCity Load (7.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (114.1ms)
+Completed 200 OK in 1160ms (Views: 1100.4ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/user_addresses/new" for 127.0.0.1 at 2017-12-03 13:22:27 +0800
+Processing by UserAddressesController#new as HTML
+  Rendering user_addresses/new.html.slim within layouts/application
+  Rendered user_addresses/_form.html.slim (84.1ms)
+  Rendered user_addresses/new.html.slim within layouts/application (140.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (70.5ms)
+Completed 200 OK in 1058ms (Views: 1013.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:22:52 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 2[0m
+  Rendered user_addresses/index.html.slim within layouts/application (58.5ms)
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (88.6ms)
+Completed 200 OK in 1185ms (Views: 1128.2ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/users/change_current_city?city_id=3" for 127.0.0.1 at 2017-12-03 13:22:54 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"Zn8KbD/tEmubQKWzt7mrl0k6ri+t4eVM8Yb8e2lwg4UiwxGbXmh0u2iSJB8I1xyxFIa2CWAlR31DZaZGi4sBjA==", "city_id"=>"3"}
+Redirected to http://localhost:3000/user_addresses
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:22:54 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 3[0m
+  [1m[36mAddress Load (1.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 3 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/index.html.slim within layouts/application (74.1ms)
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (60.5ms)
+Completed 200 OK in 1050ms (Views: 983.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/user_addresses/3" for 127.0.0.1 at 2017-12-03 13:22:57 +0800
+Processing by UserAddressesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUserAddress Load (1.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 3 LIMIT 1[0m
+  Rendering user_addresses/show.html.slim within layouts/application
+  Rendered user_addresses/show.html.slim within layouts/application (22.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (65.5ms)
+Completed 200 OK in 912ms (Views: 860.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:23:00 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 3[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 3 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/index.html.slim within layouts/application (46.5ms)
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (64.5ms)
+Completed 200 OK in 976ms (Views: 923.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/user_addresses/3/edit" for 127.0.0.1 at 2017-12-03 13:23:01 +0800
+Processing by UserAddressesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUserAddress Load (1.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 3 LIMIT 1[0m
+  Rendering user_addresses/edit.html.slim within layouts/application
+  [1m[36mAddress Load (1.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 3 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/_form.html.slim (110.6ms)
+  Rendered user_addresses/edit.html.slim within layouts/application (156.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (59.0ms)
+Completed 200 OK in 1179ms (Views: 1106.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:23:07 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.0ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 3[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 3 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/index.html.slim within layouts/application (44.0ms)
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (57.0ms)
+Completed 200 OK in 1057ms (Views: 999.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-03 13:23:09 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 3[0m
+  Rendered categories/_category_block.html.slim (13.5ms)
+  Rendered categories/_category_block.html.slim (1.0ms)
+  Rendered categories/index.html.slim within layouts/application (121.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (41.0ms)
+Completed 200 OK in 1024ms (Views: 964.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-12-03 13:23:12 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mPriceRule Load (33.2ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 3 AND (city_id = 3 and from_date <= '2017-12-03') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 14 LIMIT 1[0m
+  Rendered products/_product.html.slim (109.6ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 15 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 16 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 17 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 18 LIMIT 1[0m
+  Rendered products/_product.html.slim (18.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 13 LIMIT 1[0m
+  Rendered products/_product.html.slim (6.0ms)
+  Rendered categories/show.html.slim within layouts/application (523.9ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (62.5ms)
+Completed 200 OK in 1585ms (Views: 1371.3ms | ActiveRecord: 78.7ms)
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2017-12-03 13:23:23 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mPriceRule Load (1.0ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 4 AND (city_id = 3 and from_date <= '2017-12-03') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 4 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 4 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 20 LIMIT 1[0m
+  Rendered products/_product.html.slim (27.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 21 LIMIT 1[0m
+  Rendered products/_product.html.slim (12.5ms)
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 22 LIMIT 1[0m
+  Rendered products/_product.html.slim (16.0ms)
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 23 LIMIT 1[0m
+  Rendered products/_product.html.slim (8.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 24 LIMIT 1[0m
+  Rendered products/_product.html.slim (10.5ms)
+  [1m[36mPrice Load (2.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 19 LIMIT 1[0m
+  Rendered products/_product.html.slim (9.5ms)
+  Rendered categories/show.html.slim within layouts/application (401.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (54.0ms)
+Completed 200 OK in 1563ms (Views: 1486.0ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2017-12-03 13:23:28 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 3 LIMIT 1[0m
+  [1m[36mPriceRule Load (1.5ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 3 AND (city_id = 3 and from_date <= '2017-12-03') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (2.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 3 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 14 LIMIT 1[0m
+  Rendered products/_product.html.slim (44.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 15 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 16 LIMIT 1[0m
+  Rendered products/_product.html.slim (5.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 17 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 18 LIMIT 1[0m
+  Rendered products/_product.html.slim (9.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 13 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  Rendered categories/show.html.slim within layouts/application (398.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (88.6ms)
+Completed 200 OK in 1462ms (Views: 1390.1ms | ActiveRecord: 15.0ms)
+
+
+Started PUT "/users/change_current_city?city_id=2" for 127.0.0.1 at 2017-12-03 13:23:32 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"1DBNGnmzhosxy+htMDVi5Nissx2YcGqDGPTWleZWXD+QjFbtGDbgW8IZacGPW9XChRCrO1W0yLKqF4yoBK3eNg==", "city_id"=>"2"}
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-03 13:23:32 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (28.0ms)
+  Rendered categories/_category_block.html.slim (1.0ms)
+  Rendered categories/index.html.slim within layouts/application (131.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (60.0ms)
+Completed 200 OK in 1114ms (Views: 1053.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-03 13:23:35 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mPriceRule Load (111.1ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 1 AND (city_id = 2 and from_date <= '2017-12-03') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 2 LIMIT 1[0m
+  Rendered products/_product.html.slim (42.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 3 LIMIT 1[0m
+  Rendered products/_product.html.slim (5.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 4 LIMIT 1[0m
+  Rendered products/_product.html.slim (5.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 5 LIMIT 1[0m
+  Rendered products/_product.html.slim (5.5ms)
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 6 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 1 LIMIT 1[0m
+  Rendered products/_product.html.slim (12.5ms)
+  Rendered categories/show.html.slim within layouts/application (435.3ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (81.6ms)
+Completed 200 OK in 1625ms (Views: 1444.1ms | ActiveRecord: 126.1ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2017-12-03 13:23:39 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mPriceRule Load (1.5ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 2 AND (city_id = 2 and from_date <= '2017-12-03') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 2 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (1.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 2 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 7 LIMIT 1[0m
+  Rendered products/_product.html.slim (21.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 8 LIMIT 1[0m
+  Rendered products/_product.html.slim (10.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 9 LIMIT 1[0m
+  Rendered products/_product.html.slim (16.5ms)
+  [1m[36mPrice Load (1.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 10 LIMIT 1[0m
+  Rendered products/_product.html.slim (6.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 11 LIMIT 1[0m
+  Rendered products/_product.html.slim (8.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 12 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  Rendered categories/show.html.slim within layouts/application (406.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (113.1ms)
+Completed 200 OK in 1585ms (Views: 1509.5ms | ActiveRecord: 16.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-03 13:23:46 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Pcn5Vd1yT1rEWbbwaDgEhHwtrqYNvfItbViSKKfWuNV5deKivPcpijeLN1zXVrOiIZG2gMB5UBzfu8gVRS063A=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 34ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-03 13:23:46 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (26.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (201.6ms)
+  Rendered layouts/_menu.html.slim (88.1ms)
+Completed 200 OK in 1865ms (Views: 1859.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-03 13:23:51 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (23.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (184.6ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-03 13:23:52 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (35.5ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (277.7ms)
+  Rendered layouts/_menu.html.slim (162.6ms)
+Completed 200 OK in 2578ms (Views: 2571.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_menu.html.slim (99.1ms)
+Completed 200 OK in 2229ms (Views: 2224.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-03 13:31:17 +0800
+  [1m[35m (55.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PETFfSUdYlm+RcvtJGgyEYC6uHSJz7z2So39kPND8odpufOiuEkabdbJA1QLv0cHMcnP4GSrNf2uvuUZjEQpzw==", "user"=>{"login"=>"18813091063", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE (lower(cel) = '18813091063' OR lower(email) = '18813091063') ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-12-03 05:31:19', `last_sign_in_at` = '2017-12-03 05:22:08', `sign_in_count` = 10, `updated_at` = '2017-12-03 05:31:19' WHERE `users`.`id` = 1[0m
+  [1m[35m (184.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 1764ms (ActiveRecord: 203.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-03 13:32:29 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` ORDER BY `cities`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (13.0ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (251.7ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (53.5ms)
+Completed 200 OK in 3924ms (Views: 3508.3ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:33:03 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 2[0m
+  Rendered user_addresses/index.html.slim within layouts/application (34.5ms)
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (182.6ms)
+Completed 200 OK in 1131ms (Views: 1031.7ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/user_addresses/new" for 127.0.0.1 at 2017-12-03 13:33:06 +0800
+Processing by UserAddressesController#new as HTML
+  Rendering user_addresses/new.html.slim within layouts/application
+  Rendered user_addresses/_form.html.slim (402.3ms)
+  Rendered user_addresses/new.html.slim within layouts/application (457.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (80.6ms)
+Completed 200 OK in 1638ms (Views: 1470.1ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-03 13:44:05 +0800
+  [1m[35m (7.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/categories
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 249ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-03 13:45:09 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[35m (10.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  [1m[36mCategory Load (2.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2[0m
+  Rendered categories/_category_block.html.slim (15.5ms)
+  Rendered categories/_category_block.html.slim (1.0ms)
+  Rendered categories/index.html.slim within layouts/application (286.7ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (59.5ms)
+Completed 200 OK in 4019ms (Views: 3629.6ms | ActiveRecord: 35.5ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:45:17 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.0ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 2[0m
+  Rendered user_addresses/index.html.slim within layouts/application (34.0ms)
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (62.0ms)
+Completed 200 OK in 1109ms (Views: 997.1ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/user_addresses/new" for 127.0.0.1 at 2017-12-03 13:45:20 +0800
+Processing by UserAddressesController#new as HTML
+  Rendering user_addresses/new.html.slim within layouts/application
+  Rendered user_addresses/_form.html.slim (458.3ms)
+  Rendered user_addresses/new.html.slim within layouts/application (525.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (119.6ms)
+Completed 200 OK in 1996ms (Views: 1718.1ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/user_addresses/new" for 127.0.0.1 at 2017-12-03 13:48:31 +0800
+Processing by UserAddressesController#new as HTML
+  Rendering user_addresses/new.html.slim within layouts/application
+  Rendered user_addresses/_form.html.slim (225.2ms)
+  Rendered user_addresses/new.html.slim within layouts/application (331.7ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (78.5ms)
+Completed 200 OK in 31847ms (Views: 31736.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/addresses/suggestion.json?term=bjjt&_type=query&q=bjjt&_=1512280144159" for 127.0.0.1 at 2017-12-03 13:49:08 +0800
+Processing by AddressesController#suggestion as JSON
+  Parameters: {"term"=>"bjjt", "_type"=>"query", "q"=>"bjjt", "_"=>"1512280144159"}
+Completed 200 OK in 248ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user_addresses" for 127.0.0.1 at 2017-12-03 13:49:20 +0800
+Processing by UserAddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEOvMgaffAVn9hm8wbVRkWGuyjKAnCk2wuugBGO0XX2LEur99tXVlbM1TdcpKtX1neCOGr8sAKgzFCd+m6IZzg==", "user_address"=>{"name"=>"北京交通大学", "address_attributes"=>{"address"=>"北京交通大学", "comment"=>"", "lat"=>"39.957945", "lng"=>"116.34935"}}, "commit"=>"Create User address"}
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO `user_addresses` (`user_id`, `name`, `created_at`, `updated_at`, `city_id`) VALUES (1, '北京交通大学', '2017-12-03 05:49:20', '2017-12-03 05:49:20', 2)[0m
+  [1m[35mSQL (15.0ms)[0m  [1m[32mINSERT INTO `addresses` (`address`, `lat`, `lng`, `comment`, `addressable_type`, `addressable_id`, `created_at`, `updated_at`) VALUES ('北京交通大学', 39.957945, 116.34935, '', 'UserAddress', 4, '2017-12-03 05:49:20', '2017-12-03 05:49:20')[0m
+  [1m[35m (45.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/user_addresses
+Completed 302 Found in 204ms (ActiveRecord: 75.6ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-03 13:49:20 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (1.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1 AND `user_addresses`.`city_id` = 2[0m
+  [1m[36mAddress Load (1.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 4 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/index.html.slim within layouts/application (79.6ms)
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  Rendered layouts/_menu.html.slim (127.1ms)
+Completed 200 OK in 1704ms (Views: 1621.9ms | ActiveRecord: 10.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-12-03 13:49:25 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"O2/kDfttji6Hdj0lgavG9zrmVEQPNdfCmlFdpA5CYGDYPqHCCycnvlO1aU5pNEKTxqgQbDCF/lxrrtre9lQk0w=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 48ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-03 13:49:26 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (28.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (224.1ms)
+  Rendered layouts/_menu.html.slim (63.0ms)
+Completed 200 OK in 1882ms (Views: 1858.6ms | ActiveRecord: 0.0ms)
+
+
