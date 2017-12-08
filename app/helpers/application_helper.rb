@@ -6,8 +6,8 @@ module ApplicationHelper
       type = :success if type == 'notice'
       type = :danger   if type == 'alert'
       text = content_tag(:div,
-                         content_tag(:button, raw("&times;"), :class => "close", "data-dismiss" => "alert") +
-                             message, :class => "alert fade in alert-#{type}")
+       content_tag(:button, raw("&times;"), :class => "close", "data-dismiss" => "alert") +
+       message, :class => "alert fade in alert-#{type}")
       flash_messages << text if message
     end
     flash_messages.join("\n").html_safe
@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def qiniu_url(url)
-    "http://oy9sjtexs.bkt.clouddn.com/#{url}"
+    "http://p09ykn71s.bkt.clouddn.com/#{url}"
   end
 
   def current_city
@@ -30,6 +30,12 @@ module ApplicationHelper
       @current_city ||= City.find(session[:current_city_id])
     else
       @current_city = nil
+    end
+  end
+
+  def date_time time
+    if time
+      Time.at(time).strftime("%Y-%m-%d %H:%M:%S")
     end
   end
 end

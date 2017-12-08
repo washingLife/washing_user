@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'ec9f9a856da56ea4c86c1e5415d31977272a54e9efc6c4d764bf390fd3b353b1f88740fd631af00b20a9cef0124ca629c6d3607443bc8328559a0ab95266d56c'
+  # config.secret_key = '0937fe52c602ba0dc1df0b43bfd3b5fe62bbc8b7cd00ad695ae40239d539ecd1eecad7c18cd8cd9aaf4cf2dbca7151fb09b43972e7232283fa902da7b40c9eb5'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -34,7 +34,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  config.authentication_keys = [:login]
+  # config.authentication_keys = [:email]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -108,7 +108,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '0055de775a6bef5cc750b10423522310362259bd6f74f58faabc99473350c11d2d63213c9c347b542a95929a1d418cfc129fb313cfd3fda7f3e1d0adb3fbcc00'
+  # config.pepper = '0bb3aee653a90007b276f93c7e044f5312d9d6f223f4a0ea130b61bd8ee2533e2e32bc963cb19b450435874c3c2289d49fffe9ad21812ea893631ea4c45eae42'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -139,7 +139,7 @@ Devise.setup do |config|
   config.reconfirmable = true
 
   # Defines which key will be used when confirming an account
-  config.confirmation_keys = [:cel]
+  # config.confirmation_keys = [:email]
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
@@ -198,7 +198,7 @@ Devise.setup do |config|
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
-  config.reset_password_keys = [:cel]
+  # config.reset_password_keys = [:email]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to

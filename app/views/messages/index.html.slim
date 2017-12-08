@@ -1,0 +1,19 @@
+.panel.panel-default
+  .panel-heading
+    = "#{current_user.id}聊天记录"
+  .panel-body
+    #messages    
+  .panel-footer
+    = text_field_tag :body, '', id: 'chat-speak'
+
+javascript:
+  $(document).on('keypress', '#chat-speak', function(e){    
+    if(e.keyCode == 13){
+      var msg = $('#chat-speak').val()
+      $('#messages').append("<p class='text-left bg-success'>" + msg + '</p>')
+
+      App.chat.speak(msg)
+      $('#chat-speak').val('')
+      e.preventDefault()
+    }
+  })
