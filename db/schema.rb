@@ -84,15 +84,17 @@ ActiveRecord::Schema.define(version: 201711061534181) do
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "category_id"
-    t.integer  "user_id"
-    t.integer  "user_address_id"
+    t.integer  "category_id",                null: false
+    t.integer  "user_id",                    null: false
+    t.integer  "user_address_id",            null: false
     t.float    "total_price",     limit: 24
     t.string   "courier_status"
     t.integer  "voucher_status"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.integer  "city_id"
     t.index ["category_id"], name: "index_orders_on_category_id", using: :btree
+    t.index ["city_id"], name: "index_orders_on_city_id", using: :btree
     t.index ["user_address_id"], name: "index_orders_on_user_address_id", using: :btree
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end

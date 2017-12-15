@@ -24,10 +24,11 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = current_user.orders.create(order_params)
+    @order = current_user.orders.create(order_params.merge(city: current_city))
 
     respond_to do |format|
       if @order.save
+        @order.next!
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else
@@ -56,7 +57,7 @@ class OrdersController < ApplicationController
   def destroy
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
+      format.html { redirect_to categories_url, notice: 'Order was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

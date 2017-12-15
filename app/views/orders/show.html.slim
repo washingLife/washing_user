@@ -11,6 +11,7 @@
           tr
             td width='15%' 物流状态
             td width='35%' = show_order_courier_status @order.courier_status
+            td = link_to 'Destroy', @order, data: { confirm: 'Are you sure?' }, method: :delete
 
     .panel.panel-default
       .panel-heading#waybills
@@ -36,3 +37,22 @@
                 td = waybill.to_address.address
                 td = date_time waybill.created_at
                 td = date_time waybill.updated_at
+
+.clear
+br
+    .panel.panel-default
+      .panel-heading#operations
+        | 分拣信息
+      .panel-body
+        table.table.table-striped
+          tr
+            th 产品
+            th 数量
+            th 单价
+            th 总价
+          - @order.items.each do |item|
+            tr
+              td = item.product
+              td = item.amount
+              td = item.price
+              td = item.amount * item.price

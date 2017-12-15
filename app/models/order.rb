@@ -4,26 +4,40 @@ class Order < ApplicationRecord
   belongs_to :category
   belongs_to :user
   belongs_to :user_address
+  belongs_to :city
 
   has_many :waybills
+  has_many :items
 
   workflow_column :courier_status 
 
   workflow do
     state :new do
-      event :wuliu_qu_paidan, :transitions_to => :accpeted
-      event :reject, :transitions_to => :rejected
+      event :next, transitions_to: :wuliu_qu_paidan
     end
-    state :accpeted do
-      event :finish, :transitions_to => :finished
-      event :turnback, :transitions_to => :turnbacked
+    state :wuliu_qu_paidan do 
+      event :next, transitions_to: :wuliu_qu_jiedan
+      event :prev, transitions_to: :wuliu_qu_paidan
     end
-    state :rejected
-    state :finished
-    state :turnbacked
+    state :wuliu_qu_jiedan do 
+      event :next, transitions_to: :wuliu_qu_qianshou
+      event :prev, transitions_to: :wuliu_qu_judan
+    end
   end
 
-  after_create :create_waybill
+  def next
+    if self.new?
+      create_waybill
+    end
+  end
+
+  def prev
+    if self.wuliu_qu_paidan?
+      create_waybill
+    end
+  end
+
+  private 
   def create_waybill
     station = self.user_address.city.stations.sample
     courier = station.couriers.sample
