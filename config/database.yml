@@ -9,7 +9,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   database: ruby_course
-  username: root
+  username: root 
   password: caonima123sabi
   pool: 5
 

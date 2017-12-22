@@ -25,5 +25,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :user_card_charge_settings, only: [:index] do 
+    member do 
+      post :pay
+    end
+  end
+
   mount ActionCable.server => '/cable' 
 end
