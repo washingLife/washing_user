@@ -12,7 +12,8 @@ class User < ApplicationRecord
   has_many :pickup_waybills, as: :receiver, class_name: Waybill
 
   has_one :user_card
-
+  has_many :coupons
+  
   def to_s
     "User #{self.id}"
   end

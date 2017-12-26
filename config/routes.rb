@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :users do 
     collection do 
       put :change_current_city
+      get :user_card_logs
+      get :coupons
     end
   end
 
@@ -13,6 +15,12 @@ Rails.application.routes.draw do
   resources :messages, only: [:index]
 
   resources :orders do 
+  end
+
+  resources :vouchers do 
+    member do 
+      get :pay
+    end
   end
 
   get '/home/user', to: 'home#user', as: 'user_home'

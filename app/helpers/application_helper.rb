@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def qiniu_url(url)
-    "http://p09ykn71s.bkt.clouddn.com/#{url}"
+    "http://oy9sjtexs.bkt.clouddn.com/#{url}"
   end
 
   def current_city

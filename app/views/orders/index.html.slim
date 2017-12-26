@@ -8,10 +8,8 @@
           th Category
           th Address
           th Total price
-          th Status
           th Courier status
           th Voucher status
-          th Cleaning status
           th
           th
 
@@ -19,12 +17,10 @@
         - @orders.each do |order|
           tr
             td = order.category.name
-            td = order.address
+            td = order.user_address
             td = order.total_price
-            td = order.status
             td = show_order_courier_status order.courier_status
             td = show_order_voucher_status order.voucher_status
-            td = order.cleaning_status
             td = link_to 'Show', order
             td = link_to 'Destroy', order, data: { confirm: 'Are you sure?' }, method: :delete
 

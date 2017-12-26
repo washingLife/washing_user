@@ -1020,3 +1020,841 @@ Started GET "/cable/" [WebSocket] for ::1 at 2017-12-22 17:54:07 +0800
 Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
 Subscription class not found: "UserChannel"
 Finished "/cable/" [WebSocket] for ::1 at 2017-12-22 17:56:29 +0800
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 11:00:30 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (5.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (497.6ms)
+  Rendered layouts/_menu.html.slim (7.0ms)
+Completed 200 OK in 23741ms (Views: 23511.4ms | ActiveRecord: 144.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-26 11:01:34 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dz0tbnqzMfb+wz6DtPsJfTG1oY65kiVvl58xKK+HYp5yt3N5BcICBcBcYRW/JCNYCGpFY3LLrp/rvqMIuKjRJA==", "user"=>{"email"=>"18813091063", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (79.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '18813091063' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 322ms (ActiveRecord: 79.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dz0tbnqzMfb+wz6DtPsJfTG1oY65kiVvl58xKK+HYp5yt3N5BcICBcBcYRW/JCNYCGpFY3LLrp/rvqMIuKjRJA==", "user"=>{"email"=>"18813091063", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (5.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (33.0ms)
+  Rendered layouts/_menu.html.slim (5.0ms)
+Completed 200 OK in 742ms (Views: 351.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-26 11:01:56 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OT3PXkV1PkRKhy4rruWgru0njhynSKEJP2/Rjj9DbD88t5FJOgQNt3QYcb2lOoqL1Phq8WwRKvlDTkOuKGzfhQ==", "user"=>{"email"=>"17126244@bjtu.edu.cn", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '17126244@bjtu.edu.cn' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (189.6ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-12-26 03:01:56', `last_sign_in_at` = '2017-12-24 06:36:58', `sign_in_count` = 26, `updated_at` = '2017-12-26 03:01:56' WHERE `users`.`id` = 1[0m
+  [1m[35m (96.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 825ms (ActiveRecord: 295.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 11:01:57 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` ORDER BY `cities`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (4.0ms)
+  Rendered categories/_category_block.html.slim (1.0ms)
+  Rendered categories/index.html.slim within layouts/application (62.3ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (6.0ms)
+Completed 200 OK in 619ms (Views: 308.8ms | ActiveRecord: 48.4ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at E:/Repository/washing_user/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :from_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:7)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :to_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:8)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :deliver_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:11)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :pickup_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:12)
+DEPRECATION WARNING: raise_on_unfiltered_parameters is deprecated and has no effect in Rails 5.1. (called from instance_eval at D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 11:26:05 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (18.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (576.2ms)
+  Rendered layouts/_menu.html.slim (9.0ms)
+Completed 200 OK in 19464ms (Views: 19406.5ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-26 11:27:19 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dVugPvVxNrLHtglnlUzPQ4mU3yDOVL0JrhH30gLPaYEXjn52lyuieG2Qt2wPgt8ehLoPOJu8ihJIpS92wVgEhg==", "user"=>{"email"=>"17126244@bjtu.edu.cn", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '17126244@bjtu.edu.cn' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-12-26 03:27:19', `last_sign_in_at` = '2017-12-26 03:01:56', `sign_in_count` = 27, `updated_at` = '2017-12-26 03:27:19' WHERE `users`.`id` = 1[0m
+  [1m[35m (45.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1161ms (ActiveRecord: 47.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 11:27:20 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` ORDER BY `cities`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (9.0ms)
+  Rendered categories/_category_block.html.slim (1.0ms)
+  Rendered categories/index.html.slim within layouts/application (179.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (8.0ms)
+Completed 200 OK in 1061ms (Views: 719.7ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-26 11:27:25 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mPriceRule Load (49.2ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 1 AND (city_id = 2 and from_date <= '2017-12-26') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.0ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 2 LIMIT 1[0m
+  Rendered products/_product.html.slim (101.2ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 3 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 4 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 5 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 6 LIMIT 1[0m
+  Rendered products/_product.html.slim (6.0ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 1 LIMIT 1[0m
+  Rendered products/_product.html.slim (7.0ms)
+  Rendered categories/show.html.slim within layouts/application (314.4ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (7.0ms)
+Completed 200 OK in 835ms (Views: 605.0ms | ActiveRecord: 95.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 11:30:42 +0800
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :from_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:7)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :to_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:8)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :deliver_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:11)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :pickup_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:12)
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (5.0ms)
+  Rendered categories/_category_block.html.slim (0.0ms)
+  Rendered categories/index.html.slim within layouts/application (59.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.0ms)
+Completed 200 OK in 459ms (Views: 399.8ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 11:33:51 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/home/user" for 127.0.0.1 at 2017-12-26 11:33:53 +0800
+Processing by HomeController#user as HTML
+  Rendering home/user.html.slim within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (1.0ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  Rendered home/user.html.slim within layouts/application (39.0ms)
+  Rendered layouts/_menu.html.slim (5.0ms)
+Completed 200 OK in 300ms (Views: 281.8ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-26 11:33:59 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (0.0ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1[0m
+  [1m[36mAddress Load (44.2ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 3 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 4 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 5 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 6 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 7 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/index.html.slim within layouts/application (139.8ms)
+  Rendered layouts/_menu.html.slim (12.0ms)
+Completed 200 OK in 647ms (Views: 568.1ms | ActiveRecord: 57.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-12-26 11:34:02 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (10.0ms)
+  Rendered categories/_category_block.html.slim (1.0ms)
+  Rendered categories/index.html.slim within layouts/application (95.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (6.0ms)
+Completed 200 OK in 468ms (Views: 448.2ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/users/change_current_city?city_id=3" for 127.0.0.1 at 2017-12-26 11:34:07 +0800
+Processing by UsersController#change_current_city as HTML
+  Parameters: {"authenticity_token"=>"oMaFqm0GA4K8AnrObmqX59riDXHDJHUMTkdFWACrp/mBTR01cVnGD2ElPRPIeRbGgoJrfAW1ogbCR/mmIls9ow==", "city_id"=>"3"}
+Redirected to 
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `back_url' for #<UsersController:0x00000016d1a360>):
+  
+app/controllers/users_controller.rb:4:in `change_current_city'
+Started GET "/home/user" for 127.0.0.1 at 2017-12-26 11:34:16 +0800
+Processing by HomeController#user as HTML
+  Rendering home/user.html.slim within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (0.0ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  Rendered home/user.html.slim within layouts/application (12.6ms)
+  Rendered layouts/_menu.html.slim (7.0ms)
+Completed 200 OK in 351ms (Views: 339.9ms | ActiveRecord: 1.0ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at E:/Repository/washing_user/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :from_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:7)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :to_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:8)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :deliver_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:11)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :pickup_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:12)
+DEPRECATION WARNING: raise_on_unfiltered_parameters is deprecated and has no effect in Rails 5.1. (called from instance_eval at D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 22:55:08 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.0ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (482.9ms)
+  Rendered layouts/_menu.html.slim (5.5ms)
+Completed 200 OK in 2277ms (Views: 2160.9ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-26 22:56:23 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nsudOBG5BN+Cu8xTjmViho1Ft1Egv6xqcRoHfIKx4UGr8aEpTe5vIZ7NeTjU5449Cyq6ZRcmGtbiBTHDOv4kSA==", "user"=>{"email"=>"17126244@bjtu.edu.cn", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '17126244@bjtu.edu.cn' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 392ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nsudOBG5BN+Cu8xTjmViho1Ft1Egv6xqcRoHfIKx4UGr8aEpTe5vIZ7NeTjU5449Cyq6ZRcmGtbiBTHDOv4kSA==", "user"=>{"email"=>"17126244@bjtu.edu.cn", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (7.5ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (49.0ms)
+  Rendered layouts/_menu.html.slim (10.5ms)
+Completed 200 OK in 746ms (Views: 557.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-26 22:56:27 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JqWYuf2X7kjSu7RQMoXC2MxVwyWlFW65xOtl8MPpcZcTn6SoocCFts7NATtoBy5jSjrOEZKM2AVX9FNPe6a0ng==", "user"=>{"email"=>"17126244@bjtu.edu.cn", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '17126244@bjtu.edu.cn' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-12-26 14:56:28', `last_sign_in_at` = '2017-12-26 03:27:19', `sign_in_count` = 28, `updated_at` = '2017-12-26 14:56:28' WHERE `users`.`id` = 1[0m
+  [1m[35m (47.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 488ms (ActiveRecord: 49.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 22:56:28 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` ORDER BY `cities`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (4.0ms)
+  Rendered categories/_category_block.html.slim (0.5ms)
+  Rendered categories/index.html.slim within layouts/application (98.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.5ms)
+Completed 200 OK in 637ms (Views: 424.1ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-12-26 22:56:30 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mPriceRule Load (1.0ms)[0m  [1m[34mSELECT  `price_rules`.* FROM `price_rules` WHERE `price_rules`.`category_id` = 1 AND (city_id = 2 and from_date <= '2017-12-26') ORDER BY `price_rules`.`from_date` DESC LIMIT 1[0m
+  Rendering categories/show.html.slim within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`category_id` = 1 AND `products`.`is_del` = 0 ORDER BY `products`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 2 LIMIT 1[0m
+  Rendered products/_product.html.slim (50.0ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 3 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.5ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 4 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.0ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 5 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.5ms)
+  [1m[36mPrice Load (1.0ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 6 LIMIT 1[0m
+  Rendered products/_product.html.slim (3.0ms)
+  [1m[36mPrice Load (0.5ms)[0m  [1m[34mSELECT  `prices`.* FROM `prices` WHERE `prices`.`product_id` = 1 LIMIT 1[0m
+  Rendered products/_product.html.slim (2.5ms)
+  Rendered categories/show.html.slim within layouts/application (174.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (5.0ms)
+Completed 200 OK in 599ms (Views: 478.8ms | ActiveRecord: 56.1ms)
+
+
+Started GET "/orders/new?category=1" for 127.0.0.1 at 2017-12-26 22:56:37 +0800
+Processing by OrdersController#new as HTML
+  Parameters: {"category"=>"1"}
+  Rendering orders/new.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1[0m
+  Rendered orders/_form.html.slim (163.6ms)
+  Rendered orders/new.html.slim within layouts/application (183.6ms)
+  Rendered layouts/_menu.html.slim (7.0ms)
+Completed 200 OK in 619ms (Views: 534.3ms | ActiveRecord: 27.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2017-12-26 22:56:42 +0800
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a8MjlqqLUR7zU6H8Zx8nijvG6yoOKk+N3AfwCenL/yTT5x8XfaGJYbeIoy8t4C09LWeU6LPXrqnW8IawH4zlQQ==", "order"=>{"category_id"=>"1", "user_address_id"=>"4"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 4 LIMIT 1[0m
+  [1m[35mSQL (69.4ms)[0m  [1m[32mINSERT INTO `orders` (`category_id`, `user_id`, `user_address_id`, `courier_status`, `created_at`, `updated_at`, `city_id`) VALUES (1, 1, 4, 'new', '2017-12-26 14:56:42', '2017-12-26 14:56:42', 2)[0m
+  [1m[35m (62.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  [1m[36mStation Load (0.5ms)[0m  [1m[34mSELECT `stations`.* FROM `stations` WHERE `stations`.`city_id` = 2[0m
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :deliver_waybills, class_name: 'Waybill'` (called from <class:Courier> at E:/Repository/washing_user/app/models/courier.rb:4)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :pickup_waybills, class_name: 'Waybill'` (called from <class:Courier> at E:/Repository/washing_user/app/models/courier.rb:5)
+  [1m[36mCourier Load (0.5ms)[0m  [1m[34mSELECT `couriers`.* FROM `couriers` INNER JOIN `couriers_stations` ON `couriers`.`id` = `couriers_stations`.`courier_id` WHERE `couriers_stations`.`station_id` = 7[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 4 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 7 AND `addresses`.`addressable_type` = 'Station' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.5ms)[0m  [1m[32mINSERT INTO `waybills` (`order_id`, `status`, `sender_type`, `sender_id`, `from_address_id`, `receiver_type`, `receiver_id`, `to_address_id`, `created_at`, `updated_at`) VALUES (19, 'new', 'User', 1, 14, 'Courier', 9, 7, '2017-12-26 14:56:42', '2017-12-26 14:56:42')[0m
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (58.3ms)[0m  [1m[33mUPDATE `orders` SET `orders`.`courier_status` = 'wuliu_qu_paidan' WHERE `orders`.`id` = 19[0m
+Redirected to http://localhost:3000/orders/19
+Completed 302 Found in 598ms (ActiveRecord: 320.6ms)
+
+
+Started GET "/orders/19" for 127.0.0.1 at 2017-12-26 22:56:42 +0800
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 19 LIMIT 1[0m
+  Rendering orders/show.html.slim within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mWaybill Load (0.5ms)[0m  [1m[34mSELECT `waybills`.* FROM `waybills` WHERE `waybills`.`order_id` = 19[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`id` = 14 LIMIT 1[0m
+  [1m[36mCourier Load (0.0ms)[0m  [1m[34mSELECT  `couriers`.* FROM `couriers` WHERE `couriers`.`id` = 9 LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`id` = 7 LIMIT 1[0m
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`order_id` = 19[0m
+  Rendered orders/show.html.slim within layouts/application (68.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (12.5ms)
+Completed 200 OK in 448ms (Views: 394.8ms | ActiveRecord: 22.0ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at E:/Repository/washing_user/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :from_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:7)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :to_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:8)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :deliver_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:11)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :pickup_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:12)
+DEPRECATION WARNING: raise_on_unfiltered_parameters is deprecated and has no effect in Rails 5.1. (called from instance_eval at D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 23:15:27 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 23:16:10 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at E:/Repository/washing_user/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :from_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:7)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `belongs_to :to_address, class_name: 'Address'` (called from <class:Waybill> at E:/Repository/washing_user/app/models/waybill.rb:8)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :deliver_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:11)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :pickup_waybills, class_name: 'Waybill'` (called from <class:User> at E:/Repository/washing_user/app/models/user.rb:12)
+DEPRECATION WARNING: raise_on_unfiltered_parameters is deprecated and has no effect in Rails 5.1. (called from instance_eval at D:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/activesupport-5.1.4/lib/active_support/lazy_load_hooks.rb:69)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 23:16:42 +0800
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-12-26 23:17:46 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.slim within layouts/application
+  Rendered devise/shared/_links.html.slim (6.5ms)
+  Rendered devise/sessions/new.html.slim within layouts/application (198.6ms)
+  Rendered layouts/_menu.html.slim (6.0ms)
+Completed 200 OK in 1548ms (Views: 1498.9ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-12-26 23:18:16 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9M43xDOJaH3tqDqnxeogjh1xT3W6mYvS+BqqyLNmhQVK62P2+xOqbLoGJZa6zBQtRzwmGWsKZ+HT8ULW7FkJHg==", "user"=>{"email"=>"17126244@bjtu.edu.cn", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = '17126244@bjtu.edu.cn' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `users` SET `current_sign_in_at` = '2017-12-26 15:18:16', `last_sign_in_at` = '2017-12-26 14:56:28', `sign_in_count` = 29, `updated_at` = '2017-12-26 15:18:16' WHERE `users`.`id` = 1[0m
+  [1m[35m (44.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 495ms (ActiveRecord: 46.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 23:18:17 +0800
+Processing by CategoriesController#index as HTML
+  [1m[36mCity Load (0.0ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` ORDER BY `cities`.`id` ASC LIMIT 1[0m
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  `cities`.* FROM `cities` WHERE `cities`.`id` = 2 LIMIT 1[0m
+  Rendering categories/index.html.slim within layouts/application
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT `cities`.* FROM `cities`[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` INNER JOIN `categories_cities` ON `categories`.`id` = `categories_cities`.`category_id` WHERE `categories_cities`.`city_id` = 2 AND `categories`.`is_del` = 0[0m
+  Rendered categories/_category_block.html.slim (13.0ms)
+  Rendered categories/_category_block.html.slim (1.0ms)
+  Rendered categories/index.html.slim within layouts/application (109.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (6.5ms)
+Completed 200 OK in 676ms (Views: 547.5ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/home/user" for 127.0.0.1 at 2017-12-26 23:18:19 +0800
+Processing by HomeController#user as HTML
+  Rendering home/user.html.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (0.5ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `coupons` WHERE `coupons`.`user_id` = 1 AND (used_at is null)[0m
+  Rendered home/user.html.slim within layouts/application (86.2ms)
+  Rendered layouts/_menu.html.slim (6.0ms)
+Completed 200 OK in 432ms (Views: 407.7ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/users/user_card_logs" for 127.0.0.1 at 2017-12-26 23:18:21 +0800
+Processing by UsersController#user_card_logs as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (0.5ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  Rendering users/user_card_logs.html.slim within layouts/application
+  [1m[36mUserCardLog Load (1.0ms)[0m  [1m[34mSELECT  `user_card_logs`.* FROM `user_card_logs` WHERE `user_card_logs`.`user_card_id` = 1 ORDER BY `user_card_logs`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered users/user_card_logs.html.slim within layouts/application (25.0ms)
+  Rendered layouts/_menu.html.slim (5.0ms)
+Completed 200 OK in 385ms (Views: 348.8ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/coupons" for 127.0.0.1 at 2017-12-26 23:18:25 +0800
+Processing by UsersController#coupons as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/coupons.html.slim within layouts/application
+  [1m[36mCoupon Load (0.5ms)[0m  [1m[34mSELECT  `coupons`.* FROM `coupons` WHERE `coupons`.`user_id` = 1 AND (used_at is null) ORDER BY `coupons`.`valid_to` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mCouponList Load (0.5ms)[0m  [1m[34mSELECT  `coupon_lists`.* FROM `coupon_lists` WHERE `coupon_lists`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrderPromotion Load (0.5ms)[0m  [1m[34mSELECT  `order_promotions`.* FROM `order_promotions` WHERE `order_promotions`.`coupon_list_id` = 1 LIMIT 1[0m
+  [1m[36mCACHE CouponList Load (0.0ms)[0m  [1m[34mSELECT  `coupon_lists`.* FROM `coupon_lists` WHERE `coupon_lists`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE OrderPromotion Load (0.0ms)[0m  [1m[34mSELECT  `order_promotions`.* FROM `order_promotions` WHERE `order_promotions`.`coupon_list_id` = 1 LIMIT 1[0m  [["coupon_list_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE CouponList Load (0.0ms)[0m  [1m[34mSELECT  `coupon_lists`.* FROM `coupon_lists` WHERE `coupon_lists`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE OrderPromotion Load (0.0ms)[0m  [1m[34mSELECT  `order_promotions`.* FROM `order_promotions` WHERE `order_promotions`.`coupon_list_id` = 1 LIMIT 1[0m  [["coupon_list_id", 1], ["LIMIT", 1]]
+  Rendered users/coupons.html.slim within layouts/application (97.6ms)
+  Rendered layouts/_menu.html.slim (5.5ms)
+Completed 200 OK in 455ms (Views: 422.1ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/user_addresses" for 127.0.0.1 at 2017-12-26 23:18:30 +0800
+Processing by UserAddressesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering user_addresses/index.html.slim within layouts/application
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`user_id` = 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 3 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 4 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (1.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 5 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (0.0ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 6 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`addressable_id` = 7 AND `addresses`.`addressable_type` = 'UserAddress' LIMIT 1[0m
+  Rendered user_addresses/index.html.slim within layouts/application (72.6ms)
+  Rendered layouts/_menu.html.slim (5.5ms)
+Completed 200 OK in 434ms (Views: 394.2ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/user_card_charge_settings" for 127.0.0.1 at 2017-12-26 23:18:36 +0800
+Processing by UserCardChargeSettingsController#index as HTML
+  Rendering user_card_charge_settings/index.html.slim within layouts/application
+  [1m[36mUserCardChargeSetting Load (3.0ms)[0m  [1m[34mSELECT `user_card_charge_settings`.* FROM `user_card_charge_settings`[0m
+  Rendered user_card_charge_settings/index.html.slim within layouts/application (24.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (17.0ms)
+Completed 200 OK in 376ms (Views: 352.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/user_card_logs" for 127.0.0.1 at 2017-12-26 23:18:40 +0800
+Processing by UsersController#user_card_logs as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (1.0ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  Rendering users/user_card_logs.html.slim within layouts/application
+  [1m[36mUserCardLog Load (0.5ms)[0m  [1m[34mSELECT  `user_card_logs`.* FROM `user_card_logs` WHERE `user_card_logs`.`user_card_id` = 1 ORDER BY `user_card_logs`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered users/user_card_logs.html.slim within layouts/application (11.5ms)
+  Rendered layouts/_menu.html.slim (8.5ms)
+Completed 200 OK in 357ms (Views: 329.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/home/user" for 127.0.0.1 at 2017-12-26 23:19:49 +0800
+Processing by HomeController#user as HTML
+  Rendering home/user.html.slim within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (0.5ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `coupons` WHERE `coupons`.`user_id` = 1 AND (used_at is null)[0m
+  Rendered home/user.html.slim within layouts/application (25.0ms)
+  Rendered layouts/_menu.html.slim (7.0ms)
+Completed 200 OK in 419ms (Views: 403.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-12-26 23:19:50 +0800
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering orders/index.html.slim within layouts/application
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 ORDER BY `orders`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 4 LIMIT 1[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 3 LIMIT 1[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 5 LIMIT 1[0m
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE UserAddress Load (0.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 7 LIMIT 1[0m
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE UserAddress Load (0.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered orders/index.html.slim within layouts/application (82.6ms)
+  Rendered layouts/_menu.html.slim (7.0ms)
+Completed 200 OK in 498ms (Views: 443.1ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/orders/14" for 127.0.0.1 at 2017-12-26 23:19:56 +0800
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 14 LIMIT 1[0m
+  Rendering orders/show.html.slim within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mWaybill Load (0.5ms)[0m  [1m[34mSELECT `waybills`.* FROM `waybills` WHERE `waybills`.`order_id` = 14[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`id` = 15 LIMIT 1[0m
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :deliver_waybills, class_name: 'Waybill'` (called from <class:Courier> at E:/Repository/washing_user/app/models/courier.rb:4)
+DEPRECATION WARNING: Passing a class to the `class_name` is deprecated and will raise an ArgumentError in Rails 5.2. It eagerloads more classes than necessary and potentially creates circular dependencies. Please pass the class name as a string: `has_many :pickup_waybills, class_name: 'Waybill'` (called from <class:Courier> at E:/Repository/washing_user/app/models/courier.rb:5)
+  [1m[36mCourier Load (0.5ms)[0m  [1m[34mSELECT  `couriers`.* FROM `couriers` WHERE `couriers`.`id` = 1 LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`id` = 5 LIMIT 1[0m
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`order_id` = 14[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 7 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 8 LIMIT 1[0m
+  [1m[36mVoucher Load (1.0ms)[0m  [1m[34mSELECT  `vouchers`.* FROM `vouchers` WHERE `vouchers`.`order_id` = 14 LIMIT 1[0m
+  Rendered orders/show.html.slim within layouts/application (236.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (7.5ms)
+Completed 200 OK in 610ms (Views: 522.9ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/vouchers/1/pay" for 127.0.0.1 at 2017-12-26 23:20:00 +0800
+Processing by VouchersController#pay as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVoucher Load (1.5ms)[0m  [1m[34mSELECT  `vouchers`.* FROM `vouchers` WHERE `vouchers`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCoupon Load (0.5ms)[0m  [1m[34mSELECT `coupons`.* FROM `coupons` WHERE `coupons`.`user_id` = 1 AND (used_at is null)[0m
+  [1m[36mCouponList Load (0.5ms)[0m  [1m[34mSELECT  `coupon_lists`.* FROM `coupon_lists` WHERE `coupon_lists`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrderPromotion Load (0.0ms)[0m  [1m[34mSELECT  `order_promotions`.* FROM `order_promotions` WHERE `order_promotions`.`coupon_list_id` = 1 LIMIT 1[0m
+  [1m[36mCACHE CouponList Load (0.0ms)[0m  [1m[34mSELECT  `coupon_lists`.* FROM `coupon_lists` WHERE `coupon_lists`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE OrderPromotion Load (0.0ms)[0m  [1m[34mSELECT  `order_promotions`.* FROM `order_promotions` WHERE `order_promotions`.`coupon_list_id` = 1 LIMIT 1[0m  [["coupon_list_id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE CouponList Load (0.0ms)[0m  [1m[34mSELECT  `coupon_lists`.* FROM `coupon_lists` WHERE `coupon_lists`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE OrderPromotion Load (0.0ms)[0m  [1m[34mSELECT  `order_promotions`.* FROM `order_promotions` WHERE `order_promotions`.`coupon_list_id` = 1 LIMIT 1[0m  [["coupon_list_id", 1], ["LIMIT", 1]]
+  Rendering vouchers/pay.html.slim within layouts/application
+  Rendered vouchers/pay.html.slim within layouts/application (16.5ms)
+  Rendered layouts/_menu.html.slim (7.0ms)
+Completed 200 OK in 421ms (Views: 373.9ms | ActiveRecord: 3.0ms)
+
+
+Started PATCH "/vouchers/1" for 127.0.0.1 at 2017-12-26 23:20:04 +0800
+Processing by VouchersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sTf1UvNeq+BTrTkTW8Y7D5lzunuwf0Qv56iVtlnvPE38T/HwOc0MUsCQpTjgECFNK8HOYmpyqNZrs3rT80aj8w==", "voucher"=>{"coupon_id"=>""}, "commit"=>"Update Voucher", "id"=>"1"}
+  [1m[36mVoucher Load (0.5ms)[0m  [1m[34mSELECT  `vouchers`.* FROM `vouchers` WHERE `vouchers`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCoupon Load (12.5ms)[0m  [1m[34mSELECT  `coupons`.* FROM `coupons` WHERE `coupons`.`user_id` = 1 AND `coupons`.`id` = NULL ORDER BY `coupons`.`id` ASC LIMIT 1[0m
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 14 LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserCard Load (0.5ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `user_card_logs` (`kind`, `real_money`, `fake_money`, `loggable_type`, `loggable_id`, `user_card_id`, `created_at`, `updated_at`) VALUES (2, 37.0, 37.0, 'Order', 14, 1, '2017-12-26 15:20:04', '2017-12-26 15:20:04')[0m
+  [1m[35m (49.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.0ms)[0m  [1m[33mUPDATE `user_cards` SET `fake_money` = 117.0, `real_money` = 47.0, `updated_at` = '2017-12-26 15:20:04' WHERE `user_cards`.`id` = 1[0m
+  [1m[35m (53.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (80.1ms)[0m  [1m[33mUPDATE `orders` SET `voucher_status` = 2, `updated_at` = '2017-12-26 15:20:05' WHERE `orders`.`id` = 14[0m
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `vouchers` SET `status` = 2, `user_card_pay` = 37.0, `payed_at` = '2017-12-26 15:20:05', `updated_at` = '2017-12-26 15:20:05' WHERE `vouchers`.`id` = 1[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/orders/14
+Completed 302 Found in 315ms (ActiveRecord: 264.7ms)
+
+
+Started GET "/orders/14" for 127.0.0.1 at 2017-12-26 23:20:05 +0800
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mOrder Load (0.0ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 14 LIMIT 1[0m
+  Rendering orders/show.html.slim within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mWaybill Load (0.5ms)[0m  [1m[34mSELECT `waybills`.* FROM `waybills` WHERE `waybills`.`order_id` = 14[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`id` = 15 LIMIT 1[0m
+  [1m[36mCourier Load (0.5ms)[0m  [1m[34mSELECT  `couriers`.* FROM `couriers` WHERE `couriers`.`id` = 1 LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`id` = 5 LIMIT 1[0m
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`order_id` = 14[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 7 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 8 LIMIT 1[0m
+  Rendered orders/show.html.slim within layouts/application (51.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (6.5ms)
+Completed 200 OK in 410ms (Views: 388.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-12-26 23:20:10 +0800
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering orders/index.html.slim within layouts/application
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 ORDER BY `orders`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 5 LIMIT 1[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 4 LIMIT 1[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 3 LIMIT 1[0m
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE UserAddress Load (0.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 7 LIMIT 1[0m
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE UserAddress Load (0.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered orders/index.html.slim within layouts/application (53.0ms)
+  Rendered layouts/_menu.html.slim (5.5ms)
+Completed 200 OK in 382ms (Views: 355.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/home/user" for 127.0.0.1 at 2017-12-26 23:20:11 +0800
+Processing by HomeController#user as HTML
+  Rendering home/user.html.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (1.0ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `coupons` WHERE `coupons`.`user_id` = 1 AND (used_at is null)[0m
+  Rendered home/user.html.slim within layouts/application (18.5ms)
+  Rendered layouts/_menu.html.slim (6.0ms)
+Completed 200 OK in 404ms (Views: 385.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/user_card_logs" for 127.0.0.1 at 2017-12-26 23:20:13 +0800
+Processing by UsersController#user_card_logs as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (0.5ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  Rendering users/user_card_logs.html.slim within layouts/application
+  [1m[36mUserCardLog Load (0.5ms)[0m  [1m[34mSELECT  `user_card_logs`.* FROM `user_card_logs` WHERE `user_card_logs`.`user_card_id` = 1 ORDER BY `user_card_logs`.`id` DESC LIMIT 10 OFFSET 0[0m
+  Rendered users/user_card_logs.html.slim within layouts/application (13.5ms)
+  Rendered layouts/_menu.html.slim (6.5ms)
+Completed 200 OK in 369ms (Views: 341.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home/user" for 127.0.0.1 at 2017-12-26 23:20:25 +0800
+Processing by HomeController#user as HTML
+  Rendering home/user.html.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (0.5ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `coupons` WHERE `coupons`.`user_id` = 1 AND (used_at is null)[0m
+  Rendered home/user.html.slim within layouts/application (18.5ms)
+  Rendered layouts/_menu.html.slim (7.0ms)
+Completed 200 OK in 382ms (Views: 360.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-12-26 23:20:35 +0800
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering orders/index.html.slim within layouts/application
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 ORDER BY `orders`.`updated_at` DESC LIMIT 10 OFFSET 0[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 5 LIMIT 1[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 4 LIMIT 1[0m
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 4 LIMIT 1[0m
+  [1m[36mUserAddress Load (0.5ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 3 LIMIT 1[0m
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE UserAddress Load (0.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 5 LIMIT 1[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 3 LIMIT 1[0m
+  [1m[36mUserAddress Load (1.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 7 LIMIT 1[0m
+  [1m[36mCACHE Category Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE UserAddress Load (0.0ms)[0m  [1m[34mSELECT  `user_addresses`.* FROM `user_addresses` WHERE `user_addresses`.`id` = 4 LIMIT 1[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered orders/index.html.slim within layouts/application (45.0ms)
+  Rendered layouts/_menu.html.slim (6.0ms)
+Completed 200 OK in 399ms (Views: 370.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/orders/14" for 127.0.0.1 at 2017-12-26 23:20:37 +0800
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 14 LIMIT 1[0m
+  Rendering orders/show.html.slim within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mWaybill Load (0.5ms)[0m  [1m[34mSELECT `waybills`.* FROM `waybills` WHERE `waybills`.`order_id` = 14[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`id` = 15 LIMIT 1[0m
+  [1m[36mCourier Load (0.5ms)[0m  [1m[34mSELECT  `couriers`.* FROM `couriers` WHERE `couriers`.`id` = 1 LIMIT 1[0m
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` WHERE `addresses`.`id` = 5 LIMIT 1[0m
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT `items`.* FROM `items` WHERE `items`.`order_id` = 14[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 7 LIMIT 1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT  `products`.* FROM `products` WHERE `products`.`id` = 8 LIMIT 1[0m
+  Rendered orders/show.html.slim within layouts/application (50.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendered layouts/_menu.html.slim (10.5ms)
+Completed 200 OK in 468ms (Views: 435.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/home/user" for 127.0.0.1 at 2017-12-26 23:21:10 +0800
+Processing by HomeController#user as HTML
+  Rendering home/user.html.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUserCard Load (0.5ms)[0m  [1m[34mSELECT  `user_cards`.* FROM `user_cards` WHERE `user_cards`.`user_id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `coupons` WHERE `coupons`.`user_id` = 1 AND (used_at is null)[0m
+  Rendered home/user.html.slim within layouts/application (23.2ms)
+  Rendered layouts/_menu.html.slim (11.5ms)
+Completed 200 OK in 403ms (Views: 377.1ms | ActiveRecord: 1.5ms)
+
+

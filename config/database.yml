@@ -8,10 +8,12 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  database: ruby_course
-  username: root 
-  password: caonima123sabi
-  pool: 5
+  database: washing_development
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: 123456
+  timeout: 5000
+
 
 development:
   <<: *default
